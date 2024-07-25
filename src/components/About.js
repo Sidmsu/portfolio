@@ -147,10 +147,10 @@ const About = React.forwardRef((props, ref) => {
         <TerminalBody>
           <Command>
             <Prompt>siddheshkulkarni $ </Prompt>
-            <CommandText>cd skills/frameworks</CommandText>
+            <CommandText>cd skills/frameworks and tools</CommandText>
           </Command>
           <Command>
-            <Prompt>skills/frameworks (main) $ </Prompt>
+            <Prompt>skills/frameworks and tools (main) $ </Prompt>
             <CommandText>ls</CommandText>
           </Command>
           <Command>

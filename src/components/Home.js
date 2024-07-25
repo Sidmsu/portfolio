@@ -6,6 +6,7 @@ import { faGithub, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-
 import { motion } from 'framer-motion';
 import About from './About';
 import Contact from './Contact';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 // Keyframes for typing effect
 const typing = keyframes`
@@ -128,6 +129,9 @@ const ResumeButton = styled(motion.a)`
   &:hover {
     background-color: #00cc7a;
   }
+  svg {
+    margin-left: 10px;
+  }
 `;
 
 const ImageSection = styled.div`
@@ -189,7 +193,8 @@ const Home = () => {
                 </Button>
               </SocialIcons>
               <ResumeButton href="https://drive.google.com/file/d/1kKe8p-6KWnvon9k3ci-U6g9Waj8NOoIK/view?usp=sharing" download>
-                Download Resume
+                Resume
+                <FontAwesomeIcon icon={faDownload} />
               </ResumeButton>
             </ButtonContainer>
           </TextSection>
