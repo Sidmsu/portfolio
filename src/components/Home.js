@@ -26,6 +26,11 @@ const Container = styled.div`
   background-color: #1e1e1e;
   color: white;
   padding: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
 `;
 
 const Content = styled.div`
@@ -34,11 +39,17 @@ const Content = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const TextSection = styled.div`
   flex: 1;
   text-align: left;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -46,17 +57,36 @@ const Title = styled(motion.h1)`
   margin: 0;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
 `;
 
 const Description = styled(motion.p)`
   font-size: 1.2em;
   color: #ccc;
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 `;
 
 const ButtonContainer = styled(motion.div)`
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Button = styled(motion.a)`
@@ -79,11 +109,35 @@ const Button = styled(motion.a)`
   }
 `;
 
+const ResumeButton = styled(motion.a)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #00ff99;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  width: 150px;
+
+  &:hover {
+    background-color: #00cc7a;
+  }
+`;
+
 const ImageSection = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 const ProfileImage = styled(motion.img)`
@@ -91,6 +145,9 @@ const ProfileImage = styled(motion.img)`
   border-radius: 50%;
   border: 5px solid #00ff99;
   object-fit: cover;
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 const Name = styled.span`
@@ -117,18 +174,23 @@ const Home = () => {
               Student and Developer
             </Description>
             <ButtonContainer initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 2.5 }}>
-              <Button href="https://github.com/Sidmsu" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} />
-              </Button>
-              <Button href="https://linkedin.com/in/siddhesh-kulkarni05" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </Button>
-              <Button href="https://x.com/sidmsu27" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} />
-              </Button>
-              <Button href="https://www.instagram.com/_siddhesh.kulkarni_/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram} />
-              </Button>
+              <SocialIcons>
+                <Button href="https://github.com/Sidmsu" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faGithub} />
+                </Button>
+                <Button href="https://linkedin.com/in/siddhesh-kulkarni05" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </Button>
+                <Button href="https://x.com/sidmsu27" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTwitter} />
+                </Button>
+                <Button href="https://www.instagram.com/_siddhesh.kulkarni_/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </Button>
+              </SocialIcons>
+              <ResumeButton href="https://drive.google.com/file/d/1kKe8p-6KWnvon9k3ci-U6g9Waj8NOoIK/view?usp=sharing" download>
+                Download Resume
+              </ResumeButton>
             </ButtonContainer>
           </TextSection>
           <ImageSection>

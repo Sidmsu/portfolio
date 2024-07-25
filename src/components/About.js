@@ -114,10 +114,10 @@ const About = React.forwardRef((props, ref) => {
         <TerminalBody>
           <Command>
             <Prompt>siddheshkulkarni $ </Prompt>
-            <CommandText>cd skills/tools</CommandText>
+            <CommandText>cd skills/programming languages</CommandText>
           </Command>
           <Command>
-            <Prompt>skills/tools (main) $ </Prompt>
+            <Prompt>skills/programming languages (main) $ </Prompt>
             <CommandText>ls</CommandText>
           </Command>
           <Command>
@@ -125,22 +125,54 @@ const About = React.forwardRef((props, ref) => {
           </Command>
           <SkillsContainer>
             <SkillsColumn>
-              <CommandText>Javascript</CommandText>
-              <CommandText>React</CommandText>
-              <CommandText>git</CommandText>
-              <CommandText>github</CommandText>
-              <CommandText>C++</CommandText>
               <CommandText>Python</CommandText>
-              <CommandText>Flutter</CommandText>
+              <CommandText>Dart</CommandText>
+              <CommandText>Javascript</CommandText>
             </SkillsColumn>
             <SkillsColumn>
-              <CommandText>bootstrap</CommandText>
-              <CommandText>html5</CommandText>
-              <CommandText>css3</CommandText>
-              <CommandText>figma</CommandText>
-              <CommandText>figma</CommandText>
+              <CommandText>C++</CommandText>
+              <CommandText>HTML5</CommandText>
+              <CommandText>CSS3</CommandText>
             </SkillsColumn>
           </SkillsContainer>
+          
+        </TerminalBody>
+      </Terminal>
+      <Terminal>
+        <TerminalHeader>
+          <Circle color="#ff5f56" />
+          <Circle color="#ffbd2e" />
+          <Circle color="#27c93f" />
+        </TerminalHeader>
+        <TerminalBody>
+          <Command>
+            <Prompt>siddheshkulkarni $ </Prompt>
+            <CommandText>cd skills/frameworks</CommandText>
+          </Command>
+          <Command>
+            <Prompt>skills/frameworks (main) $ </Prompt>
+            <CommandText>ls</CommandText>
+          </Command>
+          <Command>
+            <Prompt>Proficient:</Prompt>
+          </Command>
+          <SkillsContainer>
+            <SkillsColumn>
+              <CommandText>Flutter</CommandText>
+              <CommandText>React</CommandText>
+              <CommandText>Git</CommandText>
+              <CommandText>Next.Js</CommandText>
+              <CommandText>Node.Js</CommandText>
+            </SkillsColumn>
+            <SkillsColumn>
+            <CommandText>Express</CommandText>
+              <CommandText>Arduino</CommandText>
+              <CommandText>Adafruit</CommandText>
+              <CommandText>MongoDB</CommandText>
+              <CommandText>Firebase</CommandText>
+            </SkillsColumn>
+          </SkillsContainer>
+          
         </TerminalBody>
       </Terminal>
     </Container>

@@ -4,6 +4,11 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
+// Importing images from assets directory
+import img1 from '/Users/sid/Downloads/portfolio/src/assets/images/img1.png';
+import img2 from '/Users/sid/Downloads/portfolio/src/assets/images/img2.png';
+import img3 from '/Users/sid/Downloads/portfolio/src/assets/images/img3.png';
+import img4 from '/Users/sid/Downloads/portfolio/src/assets/images/img4.png';
 
 const PortfolioContainer = styled.div`
   display: flex;
@@ -17,7 +22,7 @@ const PortfolioContainer = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Adjusted for 2 columns */
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -29,17 +34,20 @@ const Card = styled(motion.div)`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  height: 100%; /* Ensures the card takes the full height of the grid cell */
 
   &:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 `;
 
 const CardImage = styled.img`
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 250px; /* Increased height for better image display */
+  object-fit: contain; /* Ensures the image fits within the container without being cut off */
 `;
 
 const CardContent = styled.div`
@@ -69,54 +77,25 @@ const CardLink = styled.a`
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'This project involves building a responsive web application using React and Styled Components.',
-    // imageUrl: 'https://via.placeholder.com/300?text=Project+1',
-    src: '/Users/sid/Downloads/portfolio/src/assets/images/img1.png',
+    title: 'Portfolio Website',
+    imageUrl: img1,
+    githubUrl: 'https://github.com/Sidmsu/portfolio.git',
+  },
+  {
+    title: 'JARVIS - AI',
+    imageUrl: img2,
     githubUrl: 'https://github.com/Sidmsu/AI_Assistant_JARVIS.git',
   },
   {
-    title: 'Project Two',
-    description: '',
-    imageUrl: 'https://via.placeholder.com/300?text=Project+2',
+    title: 'Social Network Analyzer',
+    imageUrl: img3,
     githubUrl: 'https://github.com/Sidmsu/Social_Network_Analyzer.git',
   },
   {
-    title: 'Project Three',
-    description: '.',
-    imageUrl: 'https://via.placeholder.com/300?text=Project+3',
-    githubUrl: 'https://github.com/username/project3',
+    title: 'Arduino Obstacle Avoiding Car',
+    imageUrl: img4,
+    githubUrl: 'https://github.com/Sidmsu/arduino-obstacle-avoiding-car.git',
   },
-  {
-    title: 'Project Four',
-    description: '',
-    imageUrl: 'https://via.placeholder.com/300?text=Project+4',
-    githubUrl: 'https://github.com/username/project4',
-  },
-  {
-    title: 'Project Five',
-    description: '',
-    imageUrl: 'https://via.placeholder.com/300?text=Project+5',
-    githubUrl: 'https://github.com/username/project5',
-  },
-  // {
-  //   title: 'Project Six',
-  //   description: 'A social media application developed with Ruby on Rails and integrated with OAuth for authentication.',
-  //   imageUrl: 'https://via.placeholder.com/300?text=Project+6',
-  //   githubUrl: 'https://github.com/username/project6',
-  // },
-  // {
-  //   title: 'Project Seven',
-  //   description: 'A blockchain-based application for secure online voting using Solidity and Ethereum.',
-  //   imageUrl: 'https://via.placeholder.com/300?text=Project+7',
-  //   githubUrl: 'https://github.com/username/project7',
-  // },
-  // {
-  //   title: 'Project Eight',
-  //   description: 'An IoT project using Arduino to automate home lighting based on environmental conditions.',
-  //   imageUrl: 'https://via.placeholder.com/300?text=Project+8',
-  //   githubUrl: 'https://github.com/username/project8',
-  // },
 ];
 
 const Portfolio = () => {
