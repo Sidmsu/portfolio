@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons'; // Correct import for link icon
 
 // Importing images from assets directory
-import img1 from '/Users/sid/Downloads/portfolio/src/assets/images/img1.png';
-import img2 from '/Users/sid/Downloads/portfolio/src/assets/images/img2.png';
-import img3 from '/Users/sid/Downloads/portfolio/src/assets/images/img3.png';
-import img4 from '/Users/sid/Downloads/portfolio/src/assets/images/img4.png';
+import img1 from '../assets/images/img1.png';
+import img2 from '../assets/images/img2.png';
+import img3 from '../assets/images/img3.png';
+import img4 from '../assets/images/img4.png';
+import img5 from '../assets/images/img5.png';
 
 const PortfolioContainer = styled.div`
   display: flex;
@@ -29,7 +31,8 @@ const Grid = styled.div`
   margin-top: 20px;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Card = styled(motion.div)`
@@ -70,6 +73,7 @@ const CardDescription = styled.p`
 const CardLink = styled.a`
   display: inline-block;
   margin-top: 10px;
+  margin-right: 10px;
   color: #00ff99;
   text-decoration: none;
 
@@ -83,6 +87,13 @@ const projects = [
     title: 'Portfolio Website',
     imageUrl: img1,
     githubUrl: 'https://github.com/Sidmsu/portfolio.git',
+    websiteUrl: 'https://portfolio-dwemtecw0-siddhesh-s-projects.vercel.app/', // Add website URL here
+  },
+  {
+    title: 'Resume Builder',
+    imageUrl: img5,
+    githubUrl: 'https://github.com/Sidmsu/resume-builder.git',
+    websiteUrl: 'https://resume-builder-five-phi.vercel.app/#', // Add website URL here
   },
   {
     title: 'JARVIS - AI',
@@ -98,7 +109,7 @@ const projects = [
     title: 'Arduino Obstacle Avoiding Car',
     imageUrl: img4,
     githubUrl: 'https://github.com/Sidmsu/arduino-obstacle-avoiding-car.git',
-  },
+  },  
 ];
 
 const Portfolio = () => {
@@ -120,6 +131,11 @@ const Portfolio = () => {
               <CardLink href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} /> View Project
               </CardLink>
+              {project.websiteUrl && (
+                <CardLink href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLink} /> Visit Website
+                </CardLink>
+              )}
             </CardContent>
           </Card>
         ))}
