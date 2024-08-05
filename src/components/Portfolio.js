@@ -33,8 +33,6 @@ const Grid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-    grid-template-columns: 1fr;
-  }
 `;
 
 const Card = styled(motion.div)`
@@ -44,6 +42,7 @@ const Card = styled(motion.div)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   width: 100%;
+  max-width: 580px; /* Set a max-width to control the width of the cards */
   height: 100%;
 
   &:hover {
@@ -51,6 +50,7 @@ const Card = styled(motion.div)`
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 `;
+
 
 const CardImage = styled.img`
   width: 100%;
