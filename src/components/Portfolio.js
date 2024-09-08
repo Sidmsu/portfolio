@@ -11,6 +11,7 @@ import img2 from '../assets/images/img2.png';
 import img3 from '../assets/images/img3.png';
 import img4 from '../assets/images/img4.png';
 import img5 from '../assets/images/img5.png';
+import img6 from '../assets/images/img6.png';
 
 const PortfolioContainer = styled.div`
   display: flex;
@@ -90,6 +91,11 @@ const projects = [
     imageUrl: img1,
     githubUrl: 'https://github.com/Sidmsu/portfolio.git',
     websiteUrl: 'https://portfolio-dwemtecw0-siddhesh-s-projects.vercel.app/', // Add website URL here
+  },
+  {
+    title: 'BookBnB',
+    imageUrl: img6,
+    githubUrl: 'https://github.com/Sidmsu/BookBnB.git',
   },
   {
     title: 'Resume Builder',
