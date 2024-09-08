@@ -192,7 +192,7 @@ const Home = () => {
                   <FontAwesomeIcon icon={faInstagram} />
                 </Button>
               </SocialIcons>
-              <ResumeButton href="https://drive.google.com/file/d/1VP8pbfwlu9iS5ilTg562pAA7nPu0OXRt/view?usp=sharing" download>
+              <ResumeButton href="https://drive.google.com/file/d/13lOfUP74rRM1T5vYhmJm_MYZ3Mnh1MiL/view?usp=sharing" download>
                 Resume
                 <FontAwesomeIcon icon={faDownload} />
               </ResumeButton>
