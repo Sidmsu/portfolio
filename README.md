@@ -2,7 +2,7 @@
 
 Welcome to my Portfolio Website project! This repository contains the code for a responsive and interactive personal portfolio website developed using HTML, CSS, React, and JavaScript. The website showcases my projects, skills, and includes a contact form and blog section powered by Node.js for backend functionality.
 
-Website Link : https://portfolio-siddhesh-s-projects.vercel.app/
+Website Link : https://portfolio-siddhesh-s-projects.vercel.app/portfolio
 ## Features
 
 - **Responsive Design:** Built to ensure compatibility across various devices and screen sizes.
