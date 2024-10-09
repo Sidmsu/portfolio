@@ -100,7 +100,11 @@ const About = React.forwardRef((props, ref) => {
           <Command>
             <Prompt>aboutsiddhesh (main) $ </Prompt>
             <CommandText>
-              As a Software Engineering Fellow at Headstarter AI, my focus is on leveraging Android Framework and Web Development skills to drive technological innovation. At Michigan State University, I'm immersed in a Computer Science program that shapes my analytical and technical competencies, enriching the advanced projects our team engages with. My role in Student Outreach at MSU encapsulates my commitment to community and growth. This dedication is mirrored in my co-founding of EwebBuild, where we empowered local businesses in India with web solutions, reflecting a 99% customer satisfaction score. It's this blend of technical acumen and customer-centric values that I bring to my current endeavors.
+              I’ve always believed that technology isn’t just about solving problems—it’s about creating something that moves people. As a Computer Science student at Michigan State University, my journey has been about turning ideas into reality, whether it’s building AI-driven apps that achieve 98% accuracy or designing user-friendly web solutions that make life simpler.
+
+               What drives me? It’s the thrill of innovation and the challenge of creating something that truly makes a difference. From leading projects that merge creativity with technical precision to co-leading the Google Developer Groups at MSU, I’m all about fostering collaboration, pushing boundaries, and turning vision into impact.
+
+               If you’re looking to connect over shared passions in tech, AI, or software development—or if you’re just as excited about shaping the future of technology as I am—let’s chat!
             </CommandText>
           </Command>
         </TerminalBody>
