@@ -101,7 +101,7 @@ const projects = [
     title: 'Resume Builder',
     imageUrl: img5,
     githubUrl: 'https://github.com/Sidmsu/resume-builder.git',
-    websiteUrl: 'https://resume-builder-five-phi.vercel.app/#', // Add website URL here
+    websiteUrl: 'https://resume-builder-siddhesh-s-projects.vercel.app/', // Add website URL here
   },
   {
     title: 'JARVIS - AI',
