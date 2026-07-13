@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowUpRight, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUpRight, Download, MapPin } from 'lucide-react';
 import { profile, stats } from '../data/content.js';
-import profileImg from '../assets/images/Screenshot_2024-06-11_at_9.40.08_PM-removebg-preview.png';
+import heroImg from '../assets/images/hero-sf.jpg';
 
 const container = {
   hidden: {},
@@ -13,17 +13,21 @@ const item = {
 };
 
 const Hero = () => (
-  <section id="top" className="relative overflow-hidden pt-28 md:pt-36">
+  <section
+    id="top"
+    className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24"
+  >
     {/* backdrop */}
     <div className="pointer-events-none absolute inset-0 grid-backdrop" aria-hidden />
     <div
-      className="pointer-events-none absolute left-1/2 top-0 -z-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-accent/10 blur-[130px]"
+      className="pointer-events-none absolute left-1/2 top-[-10%] h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-accent/10 blur-[150px]"
       aria-hidden
     />
 
-    <div className="section-shell relative grid items-center gap-12 pb-20 md:grid-cols-[1.35fr_1fr] md:pb-28">
+    <div className="section-shell relative grid flex-1 items-center gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
+      {/* ---- copy ---- */}
       <motion.div variants={container} initial="hidden" animate="show">
-        <motion.div variants={item} className="flex items-center gap-2">
+        <motion.div variants={item} className="flex items-center gap-2.5">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
@@ -33,38 +37,46 @@ const Hero = () => (
 
         <motion.h1
           variants={item}
-          className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl"
+          className="mt-6 text-5xl font-extrabold leading-[0.98] tracking-[-0.02em] text-white sm:text-6xl lg:text-7xl"
         >
-          {profile.name}
+          Siddhesh
+          <br />
+          Kulkarni
         </motion.h1>
 
         <motion.p
           variants={item}
-          className="mt-4 max-w-xl text-lg leading-relaxed text-zinc-400 md:text-xl"
+          className="mt-6 max-w-md text-lg leading-relaxed text-zinc-400"
         >
-          <span className="text-zinc-200">{profile.role}</span> — {profile.tagline}{' '}
-          {profile.blurb}
+          <span className="font-medium text-white">Software Engineer</span> building{' '}
+          <span className="bg-gradient-to-r from-accent-soft to-accent bg-clip-text font-medium text-transparent">
+            reliable, scalable systems
+          </span>{' '}
+          — from LLM microservices to real-time telemetry at 500+ writes/sec.
         </motion.p>
 
-        <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-3">
+        <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-ink-950 transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink-950 shadow-lg shadow-accent/20 transition-all hover:-translate-y-0.5 hover:shadow-accent/30"
           >
             View my work
-            <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
           </a>
           <a
             href={profile.resume}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/20 hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white/20 hover:bg-white/10"
           >
             <Download size={16} /> Resume
           </a>
         </motion.div>
 
-        <motion.div variants={item} className="mt-8 flex items-center gap-4 text-zinc-400">
+        <motion.div variants={item} className="mt-9 flex items-center gap-5 text-zinc-400">
           <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="transition-colors hover:text-accent">
             <Github size={20} />
           </a>
@@ -74,41 +86,53 @@ const Hero = () => (
           <a href={`mailto:${profile.email}`} aria-label="Email" className="transition-colors hover:text-accent">
             <Mail size={20} />
           </a>
-          <span className="ml-1 hidden font-mono text-xs text-zinc-600 sm:inline">
-            {profile.location}
-          </span>
+          <span className="h-4 w-px bg-white/10" />
+          <span className="font-mono text-xs text-zinc-600">CS @ Michigan State</span>
         </motion.div>
       </motion.div>
 
-      {/* portrait */}
+      {/* ---- portrait ---- */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.94 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto w-full max-w-xs md:max-w-sm"
+        initial={{ opacity: 0, scale: 0.95, y: 12 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        className="relative mx-auto w-full max-w-sm"
       >
-        <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-tr from-accent/25 to-transparent blur-2xl" aria-hidden />
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-ink-800 to-ink-900">
+        <div
+          className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-accent/25 via-accent/5 to-transparent blur-2xl"
+          aria-hidden
+        />
+        <div className="group relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/10 shadow-2xl shadow-black/50">
           <img
-            src={profileImg}
-            alt={profile.name}
-            className="h-full w-full object-cover object-top"
+            src={heroImg}
+            alt={`${profile.name} in San Francisco`}
+            className="h-full w-full object-cover object-[58%_30%] transition-transform duration-[1.2s] ease-out group-hover:scale-105"
           />
+          {/* bottom scrim for chip legibility */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/60 via-transparent to-transparent" />
+          {/* inner ring */}
+          <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10" />
+          {/* glass location chip */}
+          <div className="absolute bottom-4 left-4 flex items-center gap-1.5 rounded-full border border-white/15 bg-black/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-md">
+            <MapPin size={12} className="text-accent" /> San Francisco, CA
+          </div>
         </div>
       </motion.div>
     </div>
 
-    {/* stats strip */}
-    <div className="section-shell relative">
+    {/* ---- stats strip ---- */}
+    <div className="section-shell relative pb-16">
       <motion.dl
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.55 }}
         className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 md:grid-cols-4"
       >
         {stats.map((s) => (
-          <div key={s.label} className="bg-ink-950 p-5 md:p-6">
-            <dt className="text-2xl font-bold text-white md:text-3xl">{s.value}</dt>
+          <div key={s.label} className="group bg-ink-950 p-5 transition-colors hover:bg-ink-900 md:p-6">
+            <dt className="text-2xl font-bold text-white transition-colors group-hover:text-accent md:text-3xl">
+              {s.value}
+            </dt>
             <dd className="mt-1 text-xs text-zinc-500 md:text-sm">{s.label}</dd>
           </div>
         ))}
