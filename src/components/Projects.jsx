@@ -71,7 +71,7 @@ const Projects = () => (
         index="03"
         eyebrow="Projects"
         title="Things I've built."
-        description="Selected work — from real-time telemetry to shipped apps in students' hands."
+        description="A few things I've built, from real-time telemetry to apps that are in students' hands right now."
       />
 
       <div className="grid gap-6 lg:grid-cols-3">

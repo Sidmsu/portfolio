@@ -6,7 +6,7 @@ export const profile = {
   role: 'Software Engineer',
   tagline: 'I build reliable, scalable systems.',
   blurb:
-    'Computer Science student at Michigan State University who likes turning messy, manual workflows into fast automated ones — from an LLM microservice inside an enterprise rules engine to a fleet-telemetry platform holding 500+ writes/sec.',
+    "I'm a Computer Science student at Michigan State who likes turning messy, manual workflows into fast automated ones. Lately that has meant an LLM microservice inside an enterprise rules engine and a fleet-telemetry platform that holds 500+ writes per second.",
   location: 'East Lansing, MI',
   email: 'kulka115@msu.edu',
   phone: '+1 (517) 348-7719',
@@ -28,9 +28,9 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm a Computer Science student at Michigan State University (B.S., May 2027) who cares about the unglamorous parts of software — the pipelines, the latency, the uptime — because that's what turns a demo into something people actually rely on.",
-    "Across internships at Delta Dental, UL Solutions, and the MSU College of Engineering I've shipped production code on agile teams: an Azure-hosted LLM microservice, an async parsing pipeline that cut staging latency 30%, and CI/CD pipelines that kept systems at 99.9% uptime.",
-    "Outside of work I co-led Google Developer Groups at MSU, running 25+ workshops and hackathons for 200+ students. I like building things end to end and helping other people build too.",
+    "I'm a Computer Science student at Michigan State, graduating in 2027. The part of software I care most about is the part people usually skip past. The pipelines, the latency numbers, the uptime. That's what decides whether a demo turns into something people can actually rely on.",
+    "So far I've gotten to ship real production code on agile teams at Delta Dental, UL Solutions, and the MSU College of Engineering. I built an LLM microservice on Azure, rewrote a parsing layer into an async pipeline that cut staging latency by 30%, and kept CI/CD pipelines running at 99.9% uptime.",
+    "Outside of work I co-led Google Developer Groups at MSU, where we ran more than 25 workshops and hackathons for over 200 students. I like building things end to end, and I like helping other people build too.",
   ],
   education: {
     school: 'Michigan State University',
@@ -50,11 +50,11 @@ export const experience = [
   {
     company: 'UL Solutions',
     role: 'Systems Engineer Intern',
-    date: 'May 2026 — Present',
+    date: 'May 2026 – Present',
     location: 'Fremont, CA',
     current: true,
     points: [
-      'Automated SAR compliance testing for wireless devices with Python scripts that execute tests, validate results, and perform device-level debugging — shortening the testing cycle and improving accuracy.',
+      'Automated SAR compliance testing for wireless devices with Python scripts that execute tests, validate results, and perform device-level debugging, which shortened the testing cycle and improved accuracy.',
       'Delivered structured engineering reports on instrumentation data to senior staff and enterprise customers during device certification, using Python and SQL to aggregate and visualize results.',
       'Managed code changes with SVN and collaborated on design discussions to enhance the testing framework, following agile practices.',
     ],
@@ -63,12 +63,12 @@ export const experience = [
   {
     company: 'MSU College of Engineering',
     role: 'Software Engineering Intern',
-    date: 'Sep 2024 — Present',
+    date: 'Sep 2024 – Present',
     location: 'East Lansing, MI',
     current: true,
     points: [
       'Built and shipped React.js / Next.js web apps, migrating 15+ legacy templates to a WCAG-compliant system.',
-      'Manage frontend CI/CD pipelines with GitHub Actions, handle QA triage, and coordinate production releases — cutting deployment time 30% while keeping uptime at 99.9%.',
+      'Manage frontend CI/CD pipelines with GitHub Actions, handle QA triage, and coordinate production releases, which cut deployment time by 30% while keeping uptime at 99.9%.',
       'Contribute front-end and back-end insights in agile ceremonies and design discussions to enhance application features.',
     ],
     tags: ['React', 'Next.js', 'GitHub Actions', 'CI/CD', 'Accessibility'],
@@ -76,7 +76,7 @@ export const experience = [
   {
     company: 'Delta Dental of Michigan',
     role: 'Software Engineering Intern',
-    date: 'May 2025 — Aug 2025',
+    date: 'May 2025 – Aug 2025',
     location: 'Okemos, MI',
     current: false,
     points: [
@@ -96,7 +96,7 @@ export const projects = [
     description:
       'Simulates 50 vehicles streaming GPS, diagnostics, and alerts in real time. Concurrent Go workers sustain 500+ writes/sec with no data loss under load, and alert-prioritization logic surfaces critical faults ahead of routine noise.',
     highlights: [
-      'Concurrent Go ingestion — 500+ writes/sec, zero data loss under load testing',
+      'Concurrent Go ingestion holding 500+ writes/sec with zero data loss under load',
       'Alert-prioritization so critical faults surface first',
       'Live dashboards with Leaflet + Chart.js to catch anomalies at a glance',
     ],
@@ -108,7 +108,7 @@ export const projects = [
     name: 'Attendance Forecast PWA',
     blurb: 'Attendance risk forecasting for 70 students',
     description:
-      'A production PWA that 70 students use to track attendance and forecast their absence risk across lectures and labs — showing how upcoming absences push them toward or past eligibility cutoffs, replacing their old spreadsheets.',
+      'A production PWA that 70 students use to track attendance and forecast their absence risk across lectures and labs. It shows how upcoming absences push them toward or past eligibility cutoffs, replacing their old spreadsheets.',
     highlights: [
       'Forecasting logic that maps absences against eligibility cutoffs',
       'Supabase Auth + PostgreSQL + Edge Functions for secure storage',
@@ -160,7 +160,7 @@ export const skills = [
 export const leadership = {
   org: 'Google Developer Groups, MSU',
   role: 'Co-Lead',
-  date: 'Jul 2024 — Jul 2025',
+  date: 'Jul 2024 – Jul 2025',
   points: [
     'Directed 25+ workshops and hackathons, engaging 200+ students in hands-on software engineering and emerging tech.',
     'Partnered with faculty and sponsors on events, outreach, and GDG executive strategy.',

@@ -10,7 +10,7 @@ const Experience = () => (
         index="02"
         eyebrow="Experience"
         title="Where I've shipped."
-        description="Production work on agile teams — architecture, pipelines, and the numbers that came with them."
+        description="Real production work on agile teams, with the architecture, pipelines, and numbers to back it up."
       />
 
       <div className="relative">

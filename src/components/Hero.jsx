@@ -51,8 +51,9 @@ const Hero = () => (
           <span className="font-medium text-white">Software Engineer</span> building{' '}
           <span className="bg-gradient-to-r from-accent-soft to-accent bg-clip-text font-medium text-transparent">
             reliable, scalable systems
-          </span>{' '}
-          — from LLM microservices to real-time telemetry at 500+ writes/sec.
+          </span>
+          . I've built everything from LLM microservices to real-time telemetry that
+          holds 500+ writes per second.
         </motion.p>
 
         <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
