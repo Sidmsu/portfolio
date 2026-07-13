@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowUpRight, Download, MapPin } from 'lucide-react';
-import { profile, stats } from '../data/content.js';
+import { profile, stats, companies } from '../data/content.js';
 import heroImg from '../assets/images/hero-sf.jpg';
 
 const container = {
@@ -15,7 +15,7 @@ const item = {
 const Hero = () => (
   <section
     id="top"
-    className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24"
+    className="relative flex min-h-screen flex-col justify-center overflow-hidden pb-14 pt-24"
   >
     {/* backdrop */}
     <div className="pointer-events-none absolute inset-0 grid-backdrop" aria-hidden />
@@ -24,7 +24,7 @@ const Hero = () => (
       aria-hidden
     />
 
-    <div className="section-shell relative grid flex-1 items-center gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
+    <div className="section-shell relative grid items-center gap-12 py-8 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
       {/* ---- copy ---- */}
       <motion.div variants={container} initial="hidden" animate="show">
         <motion.div variants={item} className="flex items-center gap-2.5">
@@ -121,12 +121,34 @@ const Hero = () => (
       </motion.div>
     </div>
 
+    {/* ---- credibility strip ---- */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.5 }}
+      className="section-shell relative mt-8"
+    >
+      <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/5 pt-6">
+        <span className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-600">
+          Experience at
+        </span>
+        {companies.map((c) => (
+          <span
+            key={c}
+            className="text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-200"
+          >
+            {c}
+          </span>
+        ))}
+      </div>
+    </motion.div>
+
     {/* ---- stats strip ---- */}
-    <div className="section-shell relative pb-16">
+    <div className="section-shell relative mt-10">
       <motion.dl
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.55 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
         className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 md:grid-cols-4"
       >
         {stats.map((s) => (

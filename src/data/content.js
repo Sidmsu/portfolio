@@ -18,6 +18,9 @@ export const profile = {
   },
 };
 
+// Company wordmarks for the hero credibility strip.
+export const companies = ['Delta Dental', 'UL Solutions', 'MSU College of Engineering'];
+
 // Headline metrics for the hero strip.
 export const stats = [
   { value: '30%', label: 'lower staging latency' },
