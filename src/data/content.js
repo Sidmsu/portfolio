@@ -95,6 +95,8 @@ export const experience = [
 export const projects = [
   {
     name: 'FleetPulse',
+    icon: 'truck',
+    tint: 'from-emerald-500/20 to-teal-500/5',
     blurb: 'Real-time fleet-telemetry platform',
     description:
       'Simulates 50 vehicles streaming GPS, diagnostics, and alerts in real time. Concurrent Go workers sustain 500+ writes/sec with no data loss under load, and alert-prioritization logic surfaces critical faults ahead of routine noise.',
@@ -109,6 +111,8 @@ export const projects = [
   },
   {
     name: 'Attendance Forecast PWA',
+    icon: 'calendar',
+    tint: 'from-teal-500/20 to-cyan-500/5',
     blurb: 'Attendance risk forecasting for 70 students',
     description:
       'A production PWA that 70 students use to track attendance and forecast their absence risk across lectures and labs. It shows how upcoming absences push them toward or past eligibility cutoffs, replacing their old spreadsheets.',
@@ -123,6 +127,8 @@ export const projects = [
   },
   {
     name: 'Campus Menu',
+    icon: 'utensils',
+    tint: 'from-green-500/20 to-emerald-500/5',
     blurb: 'Dining app for 20,000+ MSU students',
     description:
       'A cross-platform app aimed at 20,000+ MSU students to check dining menus across 10+ campus locations, with nutrition info and dietary filters. Backed by Supabase REST APIs that keep menus updating instantly during meal-time rushes. Published to the Apple App Store.',
